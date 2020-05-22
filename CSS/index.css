@@ -1,0 +1,485 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    background:linear-gradient(to right,#005f5d 30%,#ca002a) , url(../images/20200114_091111.jpg);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;    
+    flex-wrap: wrap;
+}
+header div.about{
+    position: relative;
+    width: 500px;
+    height: auto;
+    color: #fff;
+}
+header div.about h1{
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+header div.about span{
+    color: greenyellow;
+    font-size: 50px;
+    letter-spacing: 6px;
+}
+header div.about h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+header div.about p{
+    font-size: 17px;
+    word-break: break-all;
+    line-height: 22px;
+}
+header div.exp{
+    width: 400px;
+    height: auto;
+    text-align: right;
+}
+header div.exp h1{
+    color: white;
+    font-family: serif;
+    margin-bottom: 30px;
+}
+header div.exp a{
+    color: #fff;
+    padding: 10px 20px;
+    border: 1.5px solid #fff;
+    text-decoration: none;
+    border-radius: 15px;
+}
+/*Header Complete*/
+.education{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(#000,#0009,#0009) , url(../images/background2.jpg);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.education .edu{
+    width: 280px;
+    height: 400px;
+    padding: 0 20px;
+    background: #fff8;
+    box-shadow: 0 0 5px #fff;
+    transition: 0.5s ease-out;
+    margin: 30px 0;
+}
+.education .edu:hover{
+    box-shadow: 0 0 5px #fff,
+                0 0 25px #fff,
+                0 0 50px #fff;
+    transform: translate(0,-10px);
+}
+.education .edu h3{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 26px;
+    letter-spacing: 2px;
+    word-break: break-all;
+}
+.education .edu p{
+    margin-top: 20px;
+}
+
+/*======================================================================*/
+.project{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #0002;
+    padding-top: 50px;
+    background: linear-gradient(#000,#0008),url(../images/background2.gif);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.project h1.header{
+    position: relative;
+    display: block;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 44px;
+    width: 300px;
+    display: block;
+    margin: 0 auto 60px auto;
+    color: #fff;
+}
+.project h1.header::before{
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #fff;
+}
+.project h1.header::after{
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    content: '';
+    height: 2.5px;
+    width: 100%;
+    background: #fff;
+}
+.project .proj{
+    position: relative;
+    width: 80%;
+    min-height: 400px;
+    display: block;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+.project .proj:nth-child(even){
+    flex-direction: row-reverse;
+}
+.project .proj .content{
+    position: relative;
+    width: 500px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+.project .proj .content h1{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.project .proj .content a{
+    position: relative;
+    display: inline;
+    position: relative;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 70px;
+    color: #fff;
+    border: 1.5px solid #fff;
+    transition: 0.5s;
+}
+.project .proj .content a:hover{
+    background: #fff;
+    color: #000;
+}
+.project .proj .img{
+    position: relative;
+    width: 500px;
+    height: 285px;
+    overflow: hidden;
+}
+.project .proj .img img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project .proj .img span{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0009;
+    left: -100%;    
+    z-index: 1;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project .proj .img span h1{
+    text-transform: uppercase;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    width: 220px;
+    opacity: 0;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+}
+.project .proj .img span h1::after{
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    content: '';
+    height: 2.0px;
+    width: 100%;
+    background: #fff;
+}
+.project .proj .img span h1::before{
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #fff;
+}
+.project .proj .img:hover span{
+    left: 0;
+    cursor: pointer;
+}
+.project .proj .img span:hover h1{
+    opacity: 1;
+}
+
+/*=================================VIDEO==============================*/
+#project{
+	position: relative;
+	width: 100%;
+    min-height: 100vh;
+    padding-bottom: 70px;
+    background: linear-gradient(#000,#0009),url(../images/vidBack.jpg);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 40px;
+}
+.section-header{
+  text-align: center;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.section-header-underline {
+  border: 1px solid #222;
+  width: 30px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.video-gallery {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1000px;
+  height: auto;
+  text-align: center;
+}
+
+.video-gallery .gallery-item{
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 260px;
+  max-width: 580px;
+  max-height: 360px;
+  width: 48%;
+  background: #000;
+  cursor: pointer;
+}
+
+.video-gallery .gallery-item img{
+  position: relative;
+  display: block;
+  opacity: .8;
+  width: 105%;
+  height: 300px;
+  object-fit: contain;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(-23px, 0, 0);
+  backface-visibility: hidden;
+}
+
+.video-gallery .gallery-item .gallery-item-caption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+
+.video-gallery .gallery-item .gallery-item-caption,
+.video-gallery .gallery-item .gallery-item-caption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-gallery .gallery-item h2 {
+  font-weight: 300;
+  overflow: hidden;
+  padding: 0.5em 0;
+}
+
+
+.video-gallery .gallery-item h2,
+.video-gallery .gallery-item p {
+  position: relative;
+  margin: 0;
+  z-index: 10;
+}
+
+.video-gallery .gallery-item p {
+  letter-spacing: 1px;
+  font-size: 68%;
+
+  padding: 1em 0;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(10%, 0, 0);
+}
+
+.video-gallery .gallery-item:hover img{
+  opacity: .3;
+  transform: translate3d(0, 0, 0);
+
+}
+
+.video-gallery .gallery-item .gallery-item-caption {
+  text-align: left;
+}
+.video-gallery .gallery-item h2{
+	font-size: 20px;
+	font-family: 'Russo One', sans-serif;
+}
+.video-gallery .gallery-item h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  height: 1px;
+  background: #fff;
+  
+  transition: transform 0.3s;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.video-gallery .gallery-item:hover h2::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.video-gallery .gallery-item:hover p {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media screen and (max-width: 50em) {
+  .video-gallery .gallery-item {
+    display: inline-block;
+    float: none;
+    margin: 10px auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .video-gallery .gallery-item {
+    display: inline-block;
+    float: none;
+    margin: 10px auto;
+    width: 70%;
+  }
+}
+.video{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	background: rgba(255,255,255,0.8);
+	display: none;
+}
+.video video{
+	z-index: 99999;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	outline: none;
+	border: none;
+}
+.video .close{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+
+@media screen and (max-width: 1150px){
+	.video video{
+		width: 600px;
+		height: 450px;
+	}
+}
+@media screen and (max-width: 850px){
+	.video video{
+		width: 400px;
+		height: 290px;
+		object-fit: contain;
+	}
+}
+@media screen and (max-width: 750px){
+	.section-header,#gallery h1{
+		font-size: 35px;
+	}
+}
+@media screen and (max-width: 500px){
+	.video-gallery .gallery-item{
+
+	}
+	.section-header,#gallery h1{
+		font-size: 30px;
+	}
+}
+@media screen and (max-width: 400px){
+	.section-header,#gallery h1{
+		font-size: 26px;
+	}
+}
+@media screen and (max-width: 550px){
+	.video-gallery .gallery-item h2{
+		font-size: 16px;
+	}
+	.video video{
+		width: 350px;
+		height: 270px;
+		object-fit: contain;
+	}
+}
+@media screen and (max-width: 420px){
+	.video video{
+		width: 300px;
+		height: 200px;
+		object-fit: contain;
+	}
+}
