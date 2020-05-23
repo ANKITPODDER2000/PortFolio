@@ -417,6 +417,9 @@ header div.about .social a{
 }
 
 @media screen and (max-width:1075px){
+    .project{
+        padding-bottom: 40px;
+    }
 	body > div.project > div:nth-child(even),
 	body > div.project > div:nth-child(odd){
 		flex-direction: column-reverse !important;
@@ -687,4 +690,121 @@ header div.about .social a{
 		height: 200px;
 		object-fit: contain;
 	}
+}
+/*============================skill===================*/
+.skill{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #0002;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.skill .exp{
+    position: relative;
+    width: 400px;
+    height: 550px;
+    margin-top: 50px;
+}
+.skill .exp h1,
+.skill .lang h1{
+    color: #018cff;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.skill .exp hr,
+.skill .lang hr{
+    display: block;
+    height: 3px;
+    box-shadow: none;
+    border: none;
+    background: #0008;
+}
+.skill .exp .content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 207px;
+    margin-top: 20px;
+}
+.skill .exp .content .bar{
+    position: relative;
+    width: 3px;
+    height: 90%;
+    top: 10%;
+    background: #018cff;
+}
+.skill .exp .content .bar::before{
+    position: absolute;
+    top: -10%;
+    left: 0;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #222;
+    transform: translateX(-4px);
+    border-radius: 50%;
+}
+.skill .exp .content .cont{
+    position: relative;
+    width: calc(100% - 40px);
+    padding-top: 20px;
+    height: calc(100% - 20px);
+}
+.skill .exp .content .cont h1{
+    font-family:  'Roboto', sans-serif;
+    margin-bottom: 15px;
+    font-size: 23px;
+    color: #000;
+}
+.skill .exp .content .cont h2{
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.skill .lang{
+    position: relative;
+    width: 400px;
+    height: 550px;
+    margin-top: 50px;
+}
+.skill .lang p{
+    margin-top: 20px;
+    font-size: 17px;
+}
+.skill .lang span{
+    display: block;
+    width: 80%;
+    height: 5px;
+    position: relative;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: #0002;
+}
+.skill .lang span::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 100%;
+    width: var(--i);
+    background: #018cff;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+@media screen and (max-width:460px){
+    .skill .lang,
+    .skill .exp{
+        transform: scale(0.8);
+    }
+}
+@media screen and (max-width:360px){
+    .skill .exp .content{
+        height: 260px;
+    }
 }
