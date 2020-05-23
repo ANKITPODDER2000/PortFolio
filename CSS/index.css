@@ -20,16 +20,24 @@ header{
     position: relative;
     width: 100%;
     min-height: 600px;
+    background:-webkit-gradient(linear,left top, right top,color-stop(30%, #005f5d),to(#ca002a)) , url(../images/20200114_091111.jpg);
+    background:-o-linear-gradient(left,#005f5d 30%,#ca002a) , url(../images/20200114_091111.jpg);
     background:linear-gradient(to right,#005f5d 30%,#ca002a) , url(../images/20200114_091111.jpg);
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;    
-    flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;    
+    -ms-flex-wrap: wrap;    
+        flex-wrap: wrap;
 }
 header div.about{
     position: relative;
@@ -59,10 +67,19 @@ header div.about p{
 }
 header div.exp{
 	width: 400px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: flex-end;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
 }
 header div.exp h1{
     color: white;
@@ -75,6 +92,8 @@ header div.exp a{
     border: 1.5px solid #fff;
     text-decoration: none;
 	border-radius: 15px;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
 	transition: 0.5s;
 }
 header div.exp a:hover{
@@ -84,10 +103,18 @@ header div.exp a:hover{
 header div.exp .skillboard{
 	width: 200px;
 	height: 70px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-direction: row;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
 	color: #fff;
 	font-size: 25px;
 }
@@ -97,9 +124,15 @@ header div.about .social{
 	height: 50px;
 	line-height: 50px;
 	color: #fff;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
-	flex-direction: row;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
 	margin-top: 20px;
 }
 header div.about .social a{
@@ -109,7 +142,10 @@ header div.about .social a{
 /*Responsive*/
 @media screen and (max-width:1050px){
   header{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-bottom: 50px;
   }
   header div.about h1{
@@ -125,15 +161,22 @@ header div.about .social a{
     letter-spacing: 3px;
   }
   header div.exp{
-	  justify-content: flex-start;
-	  align-items: flex-start;
+	  -webkit-box-pack: start;
+	      -ms-flex-pack: start;
+	          justify-content: flex-start;
+	  -webkit-box-align: start;
+	      -ms-flex-align: start;
+	          align-items: flex-start;
   }
 }
 
 @media screen and (max-width:560px){
 	header{
 		padding: 0;
-		justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 25px 0;
 	}
 	header div.about,
 	header div.exp{
@@ -170,6 +213,8 @@ header div.about .social a{
     position: relative;
     width: 100%;
     min-height: 100vh;
+    background: -webkit-gradient(linear,left top, left bottom,from(#000),color-stop(#0009),to(#0009)) , url(../images/background2.jpg);
+    background: -o-linear-gradient(#000,#0009,#0009) , url(../images/background2.jpg);
     background: linear-gradient(#000,#0009,#0009) , url(../images/background2.jpg);
     background-blend-mode: multiply;
     background-position: center;
@@ -181,25 +226,39 @@ header div.about .social a{
 	position: relative;
 	width: 100%;
 	min-height: 60vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .education .edu{
     width: 280px;
     height: 400px;
     padding: 0 20px;
     background: #fff8;
-    box-shadow: 0 0 5px #fff;
+    -webkit-box-shadow: 0 0 5px #fff;
+            box-shadow: 0 0 5px #fff;
+    -webkit-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
     transition: 0.5s ease-out;
     margin: 30px 0;
 }
 .education .edu:hover{
-    box-shadow: 0 0 5px #fff,
+    -webkit-box-shadow: 0 0 5px #fff,
                 0 0 25px #fff,
                 0 0 50px #fff;
-    transform: translate(0,-10px);
+            box-shadow: 0 0 5px #fff,
+                0 0 25px #fff,
+                0 0 50px #fff;
+    -webkit-transform: translate(0,-10px);
+        -ms-transform: translate(0,-10px);
+            transform: translate(0,-10px);
 }
 .education .edu h3{
     text-align: center;
@@ -251,6 +310,9 @@ header div.about .social a{
 	.education .edu p{
 		font-size: 14px;
 	}
+	.education .edu h1{
+        font-size: 22px;
+    }
 }
 
 /*==================================Project Section==================================*/
@@ -260,6 +322,8 @@ header div.about .social a{
     min-height: 100vh;
     background: #0002;
     padding-top: 50px;
+    background: -webkit-gradient(linear,left top, left bottom,from(#000),to(#0008)),url(../images/background2.gif);
+    background: -o-linear-gradient(#000,#0008),url(../images/background2.gif);
     background: linear-gradient(#000,#0008),url(../images/background2.gif);
     background-position: center;
     background-attachment: fixed;
@@ -303,21 +367,39 @@ header div.about .social a{
     min-height: 400px;
     display: block;
     margin: 40px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 .project .proj:nth-child(even){
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 .project .proj .content{
     position: relative;
     width: 500px;
     height: 350px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     color: #fff;
 }
 .project .proj .content h1{
@@ -331,9 +413,11 @@ header div.about .social a{
     margin-top: 20px;
     padding: 10px 20px;
     text-decoration: none;
-    width: 70px;
+    width: 90px;
     color: #fff;
     border: 1.5px solid #fff;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 .project .proj .content a:hover{
@@ -350,7 +434,8 @@ header div.about .social a{
     position: relative;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .project .proj .img span{
     display: block;
@@ -362,10 +447,18 @@ header div.about .social a{
     background: #0009;
     left: -100%;    
     z-index: 1;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .project .proj .img span h1{
     text-transform: uppercase;
@@ -374,8 +467,12 @@ header div.about .social a{
     text-align: center;
     width: 220px;
     opacity: 0;
-    transition-delay: 0.2s;
-    transition-duration: 0.5s;
+    -webkit-transition-delay: 0.2s;
+         -o-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+    -webkit-transition-duration: 0.5s;
+         -o-transition-duration: 0.5s;
+            transition-duration: 0.5s;
 }
 .project .proj .img span h1::after{
     position: absolute;
@@ -420,36 +517,41 @@ header div.about .social a{
     .project{
         padding-bottom: 40px;
     }
-	body > div.project > div:nth-child(even),
-	body > div.project > div:nth-child(odd){
-		flex-direction: column-reverse !important;
+	.project .proj:nth-child(even),
+	.project .proj:nth-child(odd){
+		-webkit-box-orient: vertical !important;
+		-webkit-box-direction: reverse !important;
+		    -ms-flex-direction: column-reverse !important;
+		        flex-direction: column-reverse !important;
 		width: 85%;
 		padding: 15px 0;
 		margin: 20px auto;
 	}
-	body > div.project > div:nth-child(even) .content,
-	body > div.project > div:nth-child(odd) .content{
+	.project .proj:nth-child(even) .content,
+	.project .proj:nth-child(odd) .content{
 		position: relative;
 		width: 100%;
 		height: auto;
 	}
-	body > div.project > div:nth-child(even) .img,
-	body > div.project > div:nth-child(odd) .img{
+	.project .proj:nth-child(even) .img,
+	.project .proj:nth-child(odd) .img{
 		width: 100%;
 		max-height: 200px;
-		object-fit: contain;
+		-o-object-fit: contain;
+		   object-fit: contain;
 		margin-bottom: 30px;
 	}
-	body > div.project > div:nth-child(even) .img img,
-	body > div.project > div:nth-child(odd) .img img{
-		object-fit: contain;
+	.project .proj:nth-child(even) .img img,
+	.project .proj:nth-child(odd) .img img{
+		-o-object-fit: contain;
+		   object-fit: contain;
 	}
-	body > div.project > div:nth-child(even) .content p,
-	body > div.project > div:nth-child(odd) .content p{
+	.project .proj:nth-child(even) .content p,
+	.project .proj:nth-child(odd) .content p{
 		font-size: 13px;
 	}
-	body > div.project > div:nth-child(even) .content h1,
-	body > div.project > div:nth-child(odd) .content h1{
+	.project .proj:nth-child(even) .content h1,
+	.project .proj:nth-child(odd) .content h1{
 		font-size: 18px;
 	}
 }
@@ -465,6 +567,8 @@ header div.about .social a{
 	width: 100%;
     min-height: 100vh;
     padding-bottom: 70px;
+    background: -webkit-gradient(linear,left top, left bottom,from(#000),to(#0009)),url(../images/vidBack.jpg);
+    background: -o-linear-gradient(#000,#0009),url(../images/vidBack.jpg);
     background: linear-gradient(#000,#0009),url(../images/vidBack.jpg);
     background-blend-mode: multiply;
     background-position: center;
@@ -518,10 +622,17 @@ header div.about .social a{
   opacity: .8;
   width: 105%;
   height: 300px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  -o-transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  transform: translate3d(-23px, 0, 0);
-  backface-visibility: hidden;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: translate3d(-23px, 0, 0);
+          transform: translate3d(-23px, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .video-gallery .gallery-item .gallery-item-caption {
@@ -560,13 +671,19 @@ header div.about .social a{
 
   padding: 1em 0;
   opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  -o-transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  transform: translate3d(10%, 0, 0);
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: translate3d(10%, 0, 0);
+          transform: translate3d(10%, 0, 0);
 }
 
 .video-gallery .gallery-item:hover img{
   opacity: .3;
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 
 }
 
@@ -586,17 +703,28 @@ header div.about .social a{
   height: 1px;
   background: #fff;
   
+  -webkit-transition: -webkit-transform 0.3s;
+  
+  transition: -webkit-transform 0.3s;
+  
+  -o-transition: transform 0.3s;
+  
   transition: transform 0.3s;
-  transform: translate3d(-100%, 0, 0);
+  
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
 }
 
 .video-gallery .gallery-item:hover h2::after {
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .video-gallery .gallery-item:hover p {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 @media screen and (max-width: 50em) {
@@ -630,7 +758,9 @@ header div.about .social a{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
 	outline: none;
 	border: none;
 }
@@ -653,7 +783,8 @@ header div.about .social a{
 	.video video{
 		width: 400px;
 		height: 290px;
-		object-fit: contain;
+		-o-object-fit: contain;
+		   object-fit: contain;
 	}
 }
 @media screen and (max-width: 750px){
@@ -681,14 +812,16 @@ header div.about .social a{
 	.video video{
 		width: 350px;
 		height: 270px;
-		object-fit: contain;
+		-o-object-fit: contain;
+		   object-fit: contain;
 	}
 }
 @media screen and (max-width: 420px){
 	.video video{
 		width: 300px;
 		height: 200px;
-		object-fit: contain;
+		-o-object-fit: contain;
+		   object-fit: contain;
 	}
 }
 /*============================skill===================*/
@@ -697,10 +830,17 @@ header div.about .social a{
   width: 100%;
   min-height: 100vh;
   background: #0002;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .skill .exp{
     position: relative;
@@ -721,14 +861,19 @@ header div.about .social a{
 .skill .lang hr{
     display: block;
     height: 3px;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     border: none;
     background: #0008;
 }
 .skill .exp .content{
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
     height: 207px;
     margin-top: 20px;
@@ -748,7 +893,9 @@ header div.about .social a{
     width: 8px;
     height: 8px;
     background: #222;
-    transform: translateX(-4px);
+    -webkit-transform: translateX(-4px);
+        -ms-transform: translateX(-4px);
+            transform: translateX(-4px);
     border-radius: 50%;
 }
 .skill .exp .content .cont{
@@ -795,12 +942,16 @@ header div.about .social a{
     width: var(--i);
     background: #018cff;
     border-radius: 10px;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
     transition: 0.4s;
 }
 @media screen and (max-width:460px){
     .skill .lang,
     .skill .exp{
-        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+                transform: scale(0.8);
     }
 }
 @media screen and (max-width:360px){
