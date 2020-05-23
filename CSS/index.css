@@ -1,6 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&family=Russo+One&display=swap');
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1{
+  font-family: 'Russo One', sans-serif;
 }
 header{
     position: relative;
@@ -22,11 +36,13 @@ header div.about{
     width: 500px;
     height: auto;
     color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 header div.about h1{
     font-size: 40px;
     letter-spacing: 4px;
     margin-bottom: 10px;
+    font-family: 'Russo One', sans-serif;
 }
 header div.about span{
     color: greenyellow;
@@ -38,42 +54,137 @@ header div.about h2{
     margin-bottom: 10px;
 }
 header div.about p{
-    font-size: 17px;
-    word-break: break-all;
+    font-size: 15px;
     line-height: 22px;
 }
 header div.exp{
-    width: 400px;
-    height: auto;
-    text-align: right;
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
 }
 header div.exp h1{
     color: white;
     font-family: serif;
-    margin-bottom: 30px;
+    font-family: 'Russo One', sans-serif;
 }
 header div.exp a{
-    color: #fff;
+	color: #fff;
     padding: 10px 20px;
     border: 1.5px solid #fff;
     text-decoration: none;
-    border-radius: 15px;
+	border-radius: 15px;
+	transition: 0.5s;
 }
-/*Header Complete*/
+header div.exp a:hover{
+	background: #fff;
+	color: #000;
+}
+header div.exp .skillboard{
+	width: 200px;
+	height: 70px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+	color: #fff;
+	font-size: 25px;
+}
+header div.about .social{
+	position: relative;
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	margin-top: 20px;
+}
+header div.about .social a{
+	color: #fff;
+	font-size: 22px;
+}
+/*Responsive*/
+@media screen and (max-width:1050px){
+  header{
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+  header div.about h1{
+    font-size: 34px;
+  }
+  header div.exp{
+    width: 500px;
+    height: auto;
+    text-align: left;
+  }
+  header div.exp h1{
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+  header div.exp{
+	  justify-content: flex-start;
+	  align-items: flex-start;
+  }
+}
+
+@media screen and (max-width:560px){
+	header{
+		padding: 0;
+		justify-content: center;
+	}
+	header div.about,
+	header div.exp{
+		position: relative;
+		width: 90%;
+	}
+	header div.about{
+		margin-bottom: 40px;
+	}
+	header div.about h1{
+		font-size: 22px;
+	}
+	header div.about h1 span{
+		font-size: 38px;
+	}
+	header div.about h2{
+		font-size: 20px;
+	}
+	header div.about p{
+		font-size: 13px;
+	}
+	header div.exp h1{
+		font-size: 20px;
+	}
+	header div.exp a{
+		font-size: 14px;
+		padding: 10px 20px;
+	}
+}
+
+/*=========================================Header Complete=========================================*/
 .education{
+	padding-top: 60px;
     position: relative;
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
     background: linear-gradient(#000,#0009,#0009) , url(../images/background2.jpg);
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+.education .ed{
+	position: relative;
+	width: 100%;
+	min-height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .education .edu{
     width: 280px;
@@ -100,8 +211,49 @@ header div.exp a{
 .education .edu p{
     margin-top: 20px;
 }
+.education .edu i{
+	font-size: 30px;
+	margin-top: 40px;
+	display: block;
+	text-align: center;
+}
+.education .eduh1{
+	position: relative;
+	text-align: center;
+	width: 250px;
+	display: block;
+	margin: 0 auto 50px;
+	color: #fff;
+	letter-spacing: 3px;
+}
+.education .eduh1::after{
+	position: absolute;
+    bottom: -10px;
+    left: 0;
+    content: '';
+    height: 4.0px;
+    width: 100%;
+    background: #fff;
+}
+@media screen and (max-width:555px){
+	.education {
+		padding-bottom: 50px;
+	}
+	.education .edu{
+		max-width: 240px;
+	}
+	.education .eduh1{
+		font-size: 22px;
+	}
+	.education span{
+		top: 90px;
+	}
+	.education .edu p{
+		font-size: 14px;
+	}
+}
 
-/*======================================================================*/
+/*==================================Project Section==================================*/
 .project{
     position: relative;
     width: 100%;
@@ -251,6 +403,59 @@ header div.exp a{
     opacity: 1;
 }
 
+@media screen and (max-width:1260px){
+	.project .proj{
+		position: relative;
+		width: 95%;
+	}
+}
+
+@media screen and (max-width:1150px){
+	.project .proj{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:1075px){
+	body > div.project > div:nth-child(even),
+	body > div.project > div:nth-child(odd){
+		flex-direction: column-reverse !important;
+		width: 85%;
+		padding: 15px 0;
+		margin: 20px auto;
+	}
+	body > div.project > div:nth-child(even) .content,
+	body > div.project > div:nth-child(odd) .content{
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+	body > div.project > div:nth-child(even) .img,
+	body > div.project > div:nth-child(odd) .img{
+		width: 100%;
+		max-height: 200px;
+		object-fit: contain;
+		margin-bottom: 30px;
+	}
+	body > div.project > div:nth-child(even) .img img,
+	body > div.project > div:nth-child(odd) .img img{
+		object-fit: contain;
+	}
+	body > div.project > div:nth-child(even) .content p,
+	body > div.project > div:nth-child(odd) .content p{
+		font-size: 13px;
+	}
+	body > div.project > div:nth-child(even) .content h1,
+	body > div.project > div:nth-child(odd) .content h1{
+		font-size: 18px;
+	}
+}
+@media screen and (max-width:400px){
+	.project h1.header{
+		font-size: 26px;
+		width: 270px;
+	}
+}
 /*=================================VIDEO==============================*/
 #project{
 	position: relative;
@@ -277,7 +482,7 @@ header div.exp a{
 }
 
 .section-header-underline {
-  border: 1px solid #222;
+  border: 1px solid #fff;
   width: 30px;
   margin: 0 auto;
   margin-bottom: 30px;
