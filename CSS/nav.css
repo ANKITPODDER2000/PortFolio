@@ -101,7 +101,7 @@ nav a.li:hover i{
     position: relative;
     width: 80%;
     height: 6px;
-    background: #fff;
+    background: #000;
     margin: 7px 10%;
     border-radius: 100px;
     -webkit-transition: 0.7s;
@@ -114,14 +114,16 @@ nav a.li:hover i{
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
-    -webkit-box-shadow: 0px 0px 5px #000,
-                0px 0px 25px #000,
-                0px 0px 50px #0005,
-                0px 0px 100px #0002;
-            box-shadow: 0px 0px 5px #000,
-                0px 0px 25px #000,
-                0px 0px 50px #0005,
-                0px 0px 100px #0002;
+    -webkit-box-shadow: 0px 0px 5px #fff,
+                0px 0px 25px #fff,
+                0px 0px 50px #fff5,
+                0px 0px 100px #fff3,
+                0px 0px 200px #fff3;
+            box-shadow: 0px 0px 5px #fff,
+                0px 0px 25px #fff,
+                0px 0px 50px #fff5,
+                0px 0px 100px #fff2,
+                0px 0px 200px #fff3;
 }
 .handburger.active span:nth-child(1){
     -webkit-transform: translateY(15px) rotate(-45deg) scale(0.8);
@@ -165,4 +167,19 @@ nav a.li:hover i{
     -webkit-transition: 0.7s;
     -o-transition: 0.7s;
     transition: 0.7s;
+}
+#main.active{
+    transform: translateX(-350px);
+}
+@media screen and (max-width:600px){
+    #main.active{
+        transform : translateX(-220px);
+    }
+}
+::-webkit-scrollbar{
+    width: 5px;
+    overflow: scroll;
+}
+::-webkit-scrollbar-thumb{
+    background: #000;
 }

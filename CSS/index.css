@@ -2,12 +2,13 @@
 *{
     padding: 0;
     margin: 0;
+    position:relative;
     font-family: 'Roboto', sans-serif;
 }
 
 body,html{
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     position: relative;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -46,18 +47,18 @@ header div.about h1{
     margin-bottom: 10px;
     font-family: 'Russo One', sans-serif;
 }
-header div.about span{
+header div.about k{
     color: greenyellow;
     font-size: 50px;
     letter-spacing: 6px;
 }
-header div.about h2{
-    font-size: 30px;
-    margin-bottom: 10px;
+header div.about span{
+    font-size: 24px;
 }
 header div.about p{
     font-size: 15px;
     line-height: 22px;
+    margin-top: 20px;
 }
 header div.exp{
 	width: 400px;
@@ -198,6 +199,7 @@ header div.about .social a{
     box-shadow: 0 0 5px #fff;
     transition: 0.5s ease-out;
     margin: 30px 0;
+    border-radius: 5px;
 }
 .education .edu:hover{
     box-shadow: 0 0 5px #fff,
@@ -536,7 +538,6 @@ header div.about .social a{
 }
 
 .video-gallery .gallery-item .gallery-item-caption {
-  padding: 2em;
   color: #fff;
   text-transform: uppercase;
   font-size: 1.25em;
@@ -554,7 +555,7 @@ header div.about .social a{
 .video-gallery .gallery-item h2 {
   font-weight: 300;
   overflow: hidden;
-  padding: 0.5em 0;
+  padding: 25px;
 }
 
 
@@ -596,17 +597,20 @@ header div.about .social a{
   width: 15%;
   height: 1px;
   background: #fff;
-  
+  margin-left: 25px;
   transition: transform 0.3s;
   transform: translate3d(-100%, 0, 0);
+  opacity: 0;
 }
 
 .video-gallery .gallery-item:hover h2::after {
   transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 
 .video-gallery .gallery-item:hover p {
   opacity: 1;
+  margin-left: 25px;
   transform: translate3d(0, 0, 0);
 }
 
@@ -652,7 +656,13 @@ header div.about .social a{
 	top: 0;
 	left: 0;
 }
-
+#project .content .video-gallery .gallery-item .gallery-item-caption i{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    padding: 15px;
+    font-size: 30px;
+}
 
 @media screen and (max-width: 1150px){
 	.video video{
@@ -796,6 +806,7 @@ header div.about .social a{
     margin-top: 10px;
     border-radius: 10px;
     background: #0002;
+    overflow: hidden;
 }
 .skill .lang span::after{
     position: absolute;
