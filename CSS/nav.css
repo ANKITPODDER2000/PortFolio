@@ -183,3 +183,11 @@ nav a.li:hover i{
 ::-webkit-scrollbar-thumb{
     background: #000;
 }
+
+@media screen and (max-width:600px){
+    
+    ::-webkit-scrollbar{
+        width: 0px;
+        overflow: scroll;
+    }
+}

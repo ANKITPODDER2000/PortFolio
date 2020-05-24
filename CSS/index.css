@@ -385,8 +385,8 @@ header div.about .social a{
     text-align: center;
     width: 220px;
     opacity: 0;
-    transition-delay: 0.2s;
-    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+    transition-duration: 0.2s;
 }
 .project .proj .img span h1::after{
     position: absolute;
@@ -474,7 +474,7 @@ header div.about .social a{
 #project{
 	position: relative;
 	width: 100%;
-    min-height: 100vh;
+    min-height: 780px;
     padding-bottom: 70px;
     background: #f79d00;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #64f38c, #f79d00);  /* Chrome 10-25, Safari 5.1-6 */
@@ -485,6 +485,14 @@ header div.about .social a{
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding-top: 40px;
+    padding-bottom: 50px;
+}
+#project .content{
+    position: relative;
+    top:0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
 }
 .section-header{
   text-align: center;
@@ -843,4 +851,41 @@ footer{
     align-items: center;
 }
 
-/*==========================================================*/
+/*=========================COUNTER=================================*/
+.counter{
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    background: #243B55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.counter span{
+    position: relative;
+    height: 250px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    border-radius: 0px;
+    background: #243B55;
+    box-shadow: inset 5px 5px 13px #1d2f44, 
+            inset -5px -5px 13px #2b4766;
+}
+.counter span i{
+    font-size: 34px;
+}
+.counter span > *{
+    margin: 7px 0;
+}
+@media screen and (max-width:890px){
+    .counter span{
+        width: 50%;
+        height: 200px;
+    }
+}
